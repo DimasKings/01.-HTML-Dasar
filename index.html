@@ -5,136 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimas Prasatya - Profil Saya</title>
 
+    <!-- Google Fonts: Poppins (Judul), Plus Jakarta Sans (Paragraf), JetBrains Mono (NPM/Kelas) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Palet Warna:
+           - Oranye  : #D98327
+           - Krem   : #ECE8AF
+           - Hijau Daun   : #4A943E
+           - Hijau Tua    : #186049
+        */
         body {
-            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #a5c9fd 0%, #c8edff 50%, #e0f2fe 100%);
-            position: relative;
-            overflow-x: hidden;
-            color: #1e293b;
+            font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+            background-color: #ECE8AF;
+            color: #2b332f;
+            line-height: 1.7;
+            margin: 0;
+            padding: 36px 16px;
         }
 
-        .bg-shape-1, .bg-shape-2 {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(70px);
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .bg-shape-1 {
-            width: 350px;
-            height: 350px;
-            background: #38bdf8;
-            top: 5%;
-            left: 10%;
-            opacity: 0.6;
-        }
-
-        .bg-shape-2 {
-            width: 300px;
-            height: 300px;
-            background: #ffffff;
-            bottom: 8%;
-            right: 12%;
-            opacity: 0.85;
-        }
-
-        .glass-card {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: 680px;
-            padding: 45px;
-            border-radius: 28px;
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(255, 255, 255, 0.75);
-            box-shadow: 0 20px 50px rgba(14, 116, 144, 0.12),
-                        0 4px 12px rgba(255, 255, 255, 0.6) inset;
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 2px solid #D98327;
+            border-top: 8px solid #D98327;
+            border-radius: 10px;
+            padding: 28px 32px;
         }
 
         h1 {
-            font-size: 2.1rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            color: #0369a1;
-            margin-bottom: 6px;
+            font-family: 'Poppins', sans-serif;
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            color: #D98327;
         }
 
         h2 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            color: #475569;
-            margin-bottom: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            display: inline-block;
+            margin: 0 0 18px 0;
+            padding: 6px 12px;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #186049;
+            color: #ECE8AF;
+            border-radius: 6px;
         }
 
         h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: #0284c7;
-            margin-top: 20px;
-            margin-bottom: 12px;
+            font-family: 'Poppins', sans-serif;
+            margin: 20px 0 10px 0;
+            font-size: 18px;
+            color: #186049;
+            border-left: 4px solid #4A943E;
+            padding-left: 10px;
         }
 
         p {
-            font-size: 0.98rem;
-            line-height: 1.75;
-            color: #334155;
-            margin-bottom: 14px;
-            font-weight: 400;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(3, 105, 161, 0.3), transparent);
-            margin: 24px 0;
+            margin: 0 0 14px 0;
+            text-align: justify;
         }
 
         strong {
-            color: #0f172a;
+            color: #D98327;
             font-weight: 700;
         }
 
         em {
-            color: #0369a1;
-            font-style: italic;
-            font-weight: 500;
+            color: #4A943E;
+            font-weight: 600;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #ECE8AF;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-shape-1"></div>
-    <div class="bg-shape-2"></div>
-
-   <!-- 
+    <!-- 
         Dikerjakan oleh : Dimas Prasatya
         NPM             : 2510010465
         Tanggal         : 10 Oktober 2026
         Tugas           : Tugas 1 Pemrograman Web 1 - Halaman Profil Saya
     -->
 
-    <div class="glass-card">
+    <div class="container">
         <h1>Dimas Prasatya</h1>
         <h2>NPM: 2510010465 | Kelas: 3A NonReguler BJB</h2>
 
